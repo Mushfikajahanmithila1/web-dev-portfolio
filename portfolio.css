@@ -115,11 +115,11 @@ main section{
 .item-description{
     font-weight: 600;
 }
-/* 2nd section style */
-/* .second-content{
+ /* 2nd section style  */
+ .second-content{
     display: flex;
     gap: 24px;
-} */
+}
 .second-title{
     font-weight: bold;
     font-size: 35px;
@@ -195,4 +195,54 @@ footer input[type="text"], footer input[type="email"], footer textarea{
     padding: 10px 20px;
     margin-bottom: 24px;
     border: none;
+}
+
+/* responsive media*/
+@media screen and (max-width: 576px) {
+  .second-content, .resume-container, footer, .about-items, .banner, nav, nav > ul{ 
+    flex-direction: column;
+  }
+  nav > ul{
+    gap: 20px;
+  }
+  
+.btn-primary{
+    margin-bottom: 20px;
+}
+  .banner{
+    margin: 22px;
+  }
+  .banner-profile-pic{
+    width: 100%;
+  }
+  .header{
+    background-image: none;
+  }
+  footer, .about{
+    padding: 20px;
+  }
+  .footer-column{
+    width: 100%;
+  }
+  footer input[type="text"], footer input[type="email"], footer textarea{
+    width: calc(100% - 40px);
+  }
+}
+@media  screen and (min-width: 577px) and (max-width: 992px) {
+    .banner{
+        flex-direction: column;
+    }
+    .second-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer{
+        flex-direction: column;
+    }
+     .footer-column{
+    width: 100%;
+     }
+     .resume-container{
+        display: grid;
+     }
 }
